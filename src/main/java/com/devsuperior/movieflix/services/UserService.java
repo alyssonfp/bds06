@@ -38,10 +38,12 @@ public class UserService implements UserDetailsService {
 	}
 	
 	@Transactional(readOnly = true)
-	public UserDTO userLoged(Long id) {
+	public UserDTO userLoged() {
 		User user = authService.authenticated();
 		return new UserDTO(user);
 	}
+	
+	
 	
 	
 
