@@ -1,9 +1,10 @@
-import { Router, Switch, Route, Redirect } from 'react-router-dom';
+import { Router, Switch, Route } from 'react-router-dom';
 import Navbar from 'components/Navbar';
-import Auth from 'pages/Home';
 import history from 'util/history';
 import Home from 'pages/Home';
 import MovieDetails from 'pages/MovieDetails';
+import Movie from 'pages/Movie'
+
 
 
 const Routes = () => (
@@ -14,16 +15,12 @@ const Routes = () => (
       <Home />
     </Route>
     <Route path="/movies" exact>
-      <MovieDetails />
+      <Movie />
     </Route>
     <Route path="/movies/:movieId">
       <MovieDetails />
     </Route>
-    <Redirect from="/admin/auth" to="/admin/auth/login" exact />
-    <Route path="/admin/auth" >
-      <Auth />
-    </Route>
-  </Switch>
+    </Switch>
 </Router>
 );
 

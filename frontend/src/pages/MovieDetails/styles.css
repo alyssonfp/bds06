@@ -1,129 +1,139 @@
-.product-details-container {
-    padding: 10px;
+.movie-detail-container {
+  padding: 10px;
+  max-width: 2000px;
+  
+}
+
+.movie-detail-container p {
+  color: #fff;
+}
+
+.movie-detail-card {
+  padding: 20px 10px;
+  margin-bottom: 20px;
+  
+
+  
+}
+
+.movie-detail-card-img {
+  padding: 10px 0;
+  text-align: center;
+}
+
+.movie-detail-card-img img {
+  width: 260px;
+  height: 163px;
+}
+
+.movie-detail-card-description {
+  padding: 10px;
+  
+}
+
+.movie-detail-card-description h2 {
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: -0.015em;
+  color: #fff;
+  margin-bottom: 0;
+}
+
+.movie-detail-card-description h6 {
+  color: #ffc700;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.movie-detail-sinopse {
+  border: 1px solid #e1e1e1;
+  box-sizing: border-box;
+  border-radius: 10px;
+  padding: 10px;
+  
+}
+
+.movie-detail-sinopse p {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: justify;
+  letter-spacing: -0.015em;
+  color: #9e9e9e;
+}
+
+.lista-avaliacoes-container {
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  margin-top: 20px;
+  background-color: #6C6C6C;
+  
+}
+
+.sem-avaliacao {
+  margin-left: 10px;
+}
+
+@media(min-width: 576px){
+  .movie-detail-container {
+    padding: 20px;
+  }
+  .movie-detail-card-img img {
+    width: 495px;
+    height: 310px;
+  }
+}
+
+@media(min-width: 768px){
+  .movie-detail-container {
+    padding: 40px;
+  }
+
+  .movie-detail-card-img img {
+    width: 610px;
+    height: 385px;
+  }
+
+  .movie-detail-card-description {
+    padding: 40px;
+  }
+
+  .movie-detail-card-description h2 {
+    font-size: 36px;
+  }
+
+  .movie-detail-card-description h6 {
     font-size: 24px;
-}
+  }
 
-.product-details-card {
-    padding: 10px;
-}
-
-.goback-container {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.goback-container h2 {
-    margin-left: 15px;
-    font-size: 1em;
-    color: #263238;
-    letter-spacing: -0.015em;
-    text-transform: uppercase;
-}
-
-.goback-container svg {
-    margin-left: 5px;
-    color: #407BFF;
-    transform: rotate(-180deg);
-}
-
-.img-container {
-    text-align: center;
-    margin-bottom: 20px;
-    border: 1px solid #E1E1E1;
-    border-radius: 20px;
-    padding: 10px;
-}
-
-.img-container img {
-    width: 80%;
-}
-
-.name-price-container {
-    margin-bottom: 20px;
-}
-
-.name-price-container h1 {
-    color: #263238;
-    font-size: 1.1em;
-    letter-spacing: -0.015em;
-}
-
-.description-container {
-    border: 1px solid #E1E1E1;
-    border-radius: 20px;
-    padding: 10px;
-}
-
-.description-container h2 {
-    color: #9E9E9E;
-    letter-spacing: -0.015em;
-    font-size: 0.8em;
-    margin-bottom: 20px;
-}
-
-.description-container p {
-    color: #9E9E9E;
-    letter-spacing: -0.015em;
-    font-size: 0.6em;
-}
-
-@media (min-width: 576px) {
-    .product-details-container {
-        padding: 20px;
-        font-size: 32px;
-    }
-
-    .product-details-card {
-        padding: 20px;
-    }
-}
-
-@media (min-width: 992px) {
-    .product-details-container {
-        padding: 40px;
-    }
-
-    .product-details-card {
-        padding: 40px;
-    }
-
-    .img-container img {
-        width: 50%;
-    }
-
-    .description-container {
-        padding: 40px;
-    }
-
-    .name-price-container {
-        display: flex;
-        justify-content: space-between;
-    }
+  .movie-detail-card-description p {
+    font-size: 24px;
+    margin-bottom: 0;
+  }
+  .movie-detail-sinopse {
+    margin: 0 30px;
+  }
 }
 
 @media (min-width: 1200px) {
-    .name-price-container {
-        display: block;
-    }
 
-    .img-container img {
-        height: 280px;
-        width: auto;
-    }
-
-    .description-container {
-        min-height: 302px;
-    }
+  .movie-detail-card-img img {
+    width: 500px;
+    height: 315px;
+  }
+.movie-detail-card-description {
+  padding: 20px;
+}
+  .lista-avaliacoes-container {
+    margin-top: 30px;
+  }
 }
 
-@media (min-width: 1400px) {
-    .img-container img {
-        height: 480px;
-        width: auto;
-    }
-
-    .description-container {
-        min-height: 502px;
-    }
+@media(min-width: 1400px){
+  .movie-detail-container {
+      margin: auto;
+  }
 }

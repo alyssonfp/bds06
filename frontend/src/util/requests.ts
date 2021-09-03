@@ -14,6 +14,11 @@ type LoginData = {
   password: string;
 };
 
+type DadosAvaliacao = {
+  text : string,
+  movieId : string
+};
+
 export const requestBackendLogin = (loginData: LoginData) => {
   const headers = {
     'Content-Type': 'application/x-www-form-urlencoded',
@@ -29,6 +34,22 @@ export const requestBackendLogin = (loginData: LoginData) => {
     method: 'POST',
     baseURL: BASE_URL,
     url: '/oauth/token',
+    data,
+    headers,
+  });
+};
+
+export const requestBackendReview = (dadosAvaliacao: DadosAvaliacao) => {
+  const headers = {
+    'Content-Type': 'application/json',
+    Authorization: 'Bearer ' + getAuthData().access_token,
+  };
+  const data = JSON.stringify(dadosAvaliacao);
+
+  return axios({
+    method: 'POST',
+    baseURL: BASE_URL,
+    url: '/reviews',
     data,
     headers,
   });
@@ -65,7 +86,7 @@ axios.interceptors.response.use(
   },
   function (error) {
     if (error.response.status === 401) {
-      history.push('/admin/auth');
+      history.push('/');
     }
     return Promise.reject(error);
   }

@@ -22,7 +22,7 @@ const Login = () => {
 
   const location = useLocation<LocationState>();
 
-  const { from } = location.state || { from: { pathname: '/admin' } };
+  const { from } = location.state || { from: { pathname: '/movies' } };
 
   const { setAuthContextData } = useContext(AuthContext);
 
@@ -47,7 +47,8 @@ const Login = () => {
       setHasError(true);
       console.log('ERRO', error);
     });
-  }   
+  }
+     
 
   return (
     <div className="login-card">

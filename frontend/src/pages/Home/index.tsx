@@ -1,9 +1,10 @@
 import { ReactComponent as AuthImage } from 'assets/images/auth-image.svg';
+import { hasAnyRoles } from 'util/auth';
 import Login from './Login';
 
 import './styles.css';
 
-const Auth = () => {
+const Home = () => {
 
     return (
         <div className="auth-container">
@@ -19,4 +20,4 @@ const Auth = () => {
     );
 }
 
-export default Auth;
+export default Home;
